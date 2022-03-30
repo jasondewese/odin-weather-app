@@ -1,5 +1,6 @@
 const openWeatherRequest = (() => {
 
+    //@param location {string} city, county code, state code. No spaces
     const _apiRequest = async (location) => {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=380d5021392cb05faf4ef872ad04e3ef`,
         {mode: 'cors'}
@@ -9,12 +10,13 @@ const openWeatherRequest = (() => {
         return weatherData;
     }
 
-    const getWeather = async (reqLocation) => {
-        const location = reqLocation;
+    const getWeather = async (location) => {
         const weatherReport = await _apiRequest(location);
-    
-        console.log(weatherReport);
+        
+        return weatherReport;
+        
     }
+
 
     return {getWeather};
 })();
