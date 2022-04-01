@@ -13,9 +13,26 @@ const openWeatherRequest = (() => {
     const getWeather = async (location) => {
         const weatherReport = await _apiRequest(location);
         
-        return weatherReport;
+        const weather = {
+            name: weatherReport.name,
+            main: weatherReport.weather[0].main,
+            description: weatherReport.weather[0].description,
+            temp: weatherReport.main.temp,
+            feelsLike: weatherReport.main.feels_like,
+            humidity: weatherReport.main.humidity,
+            tempMax: weatherReport.main.temp_max,
+            tempMin: weatherReport.main.temp_min,
+            windSpeed: weatherReport.wind.speed,
+            windDirection: weatherReport.wind.deg,
+            windGust: weatherReport.wind.gust
+        }
+
+        console.log(weather);
+
+        return weather;
         
     }
+
 
 
     return {getWeather};
