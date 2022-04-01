@@ -8,8 +8,25 @@ const eventInit = (() => {
 
 
         locationSearch.addEventListener('click', function() {
-            openWeatherRequest.getWeather(location.value);
+            
+            const regex1 = /^[a-zA-z]+$/;
+            const regex2 = /^[a-zA-z]+,[a-zA-z]{2}$/;
+            const regex3 = /^[a-zA-z]+,[a-zA-z]+,[a-zA-z]{2}$/;
+
+            if (!regex1.test(location.value) && !regex2.test(location.value) && !regex3.test(location.value)) {
+                location.setCustomValidity('Please enter as {City}, {City,Country}, or {City,State,Country}');
+                location.reportValidity();
+            }
+            else {
+                openWeatherRequest.getWeather(location.value);
+                location.setCustomValidity('');
+                location.reportValidity();
+            }
+            
+            
         });
+
+        
     }
 
     return {pageInit};
