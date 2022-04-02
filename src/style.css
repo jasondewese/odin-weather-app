@@ -64,8 +64,37 @@ header form button:hover, .units-wrapper:hover {
 
 /*****style main*****/
 main {
-   
     background-color: #f1f5f9;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.current-weather {
+    height: 100%;
+    width: 50%;
+    display: grid;
+    grid-template-rows: 2fr 1fr 2fr 2fr 1fr;
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+    font-size: 1.5rem;
+}
+
+.low-high {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.current-weather img {
+    width: 5rem;
+}
+
+.city, .temp {
+    font-size: 2.5rem;
+    font-weight: 600;
 }
 
 /*****end style main*****/
