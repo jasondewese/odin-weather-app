@@ -5,4 +5,19 @@ html {
 
 .container {
     display: grid;
+    grid-template-rows: 5rem 2fr 1fr 1fr;
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    border: 1px solid black;
+}
+
+.weather-details {
+    border: 1px solid black;
+}
+
+.seven-day {
+    border: 1px solid black;
 }
