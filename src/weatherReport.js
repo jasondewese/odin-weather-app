@@ -48,6 +48,9 @@ const weatherReport = (() => {
     }
 
     const getWeather = async (location) => {
+        //delete old weather forecast before filling the list with the new one
+        weatherForecast.splice(0,weatherForecast.length);
+
         const weatherReport = await openWeatherRequest.apiRequest(location);
                          
         _addCurrentWeather(weatherReport, weatherForecast);

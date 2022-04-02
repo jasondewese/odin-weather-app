@@ -1,7 +1,12 @@
 import { openWeatherRequest } from "./openWeatherRequest.js";
 import { weatherReport } from "./weatherReport.js";
+import { weatherUpdate } from "./weatherUpdate.js";
 
 const eventInit = (() => {
+
+    let isPageStart = false;
+
+    const DEFAULT_CITY = 'dallas,tx,us';
 
     const pageInit = async () => {
         const locationSearch = document.querySelector('#search-button');
@@ -19,15 +24,16 @@ const eventInit = (() => {
                 location.reportValidity();
             }
             else {
-                weatherReport.getWeather(location.value);
+                weatherUpdate.updateWeather(location.value);
                 location.setCustomValidity('');
                 location.reportValidity();
             }
-            
-            
-        });
 
-        
+        });
+          
+        if (!isPageStart) {
+            weatherUpdate.updateWeather(DEFAULT_CITY);
+        }
     }
 
     return {pageInit};
