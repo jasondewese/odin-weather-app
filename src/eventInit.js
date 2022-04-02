@@ -4,7 +4,7 @@ const eventInit = (() => {
 
     const pageInit = async () => {
         const locationSearch = document.querySelector('#search-button');
-        const location = document.querySelector('#location');
+        const location = document.querySelector('#location-search');
 
 
         locationSearch.addEventListener('click', function() {
