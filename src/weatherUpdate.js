@@ -8,29 +8,29 @@ const weatherUpdate = (() => {
         let weatherIcon;
 
         if (weatherDescr === 'Clouds') {
-            weatherIcon = './../dist/images/weather-cloudy.svg';
+            weatherIcon = './images/weather-cloudy.svg';
         }
         else if (weatherDescr === 'Clear') {
-            weatherIcon = './../dist/images/weather-sunny.svg';
+            weatherIcon = './images/weather-sunny.svg';
         }
         else if (weatherDescr === 'Fog') {
-            weatherIcon = './../dist/images/weather-fog.svg';
+            weatherIcon = './images/weather-fog.svg';
         }
         else if (weatherDescr === 'Snow') {
-            weatherIcon = './../dist/images/weather-snowy.svg';
+            weatherIcon = './images/weather-snowy.svg';
         }
         else if (weatherDescr === 'Rain') {
-            weatherIcon = './../dist/images/weather-pouring.svg';
+            weatherIcon = './images/weather-pouring.svg';
         }
         else if (weatherDescr === 'Drizzle') {
-            weatherIcon = './../dist/images/weather-rainy.svg';
+            weatherIcon = './images/weather-rainy.svg';
         }
         else if (weatherDescr === 'Thunderstorm') {
-            weatherIcon = './../dist/images/weather-lightning-rainy.svg';
+            weatherIcon = './images/weather-lightning-rainy.svg';
         }
         else {
             //default for now if some other condition
-            weatherIcon = './../dist/images/weather-partly-cloudy.svg';
+            weatherIcon = './images/weather-partly-cloudy.svg';
         }
         
         return weatherIcon;
