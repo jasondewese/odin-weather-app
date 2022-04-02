@@ -1,4 +1,5 @@
 import { openWeatherRequest } from "./openWeatherRequest.js";
+import { weatherReport } from "./weatherReport.js";
 
 const eventInit = (() => {
 
@@ -18,7 +19,7 @@ const eventInit = (() => {
                 location.reportValidity();
             }
             else {
-                openWeatherRequest.getWeather(location.value);
+                weatherReport.getWeather(location.value);
                 location.setCustomValidity('');
                 location.reportValidity();
             }
