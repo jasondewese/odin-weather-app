@@ -21,7 +21,7 @@ header {
     background-color: #e0f2fe;
     box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
     z-index:1;
-    font-size: 24px;
+    font-size: 22px;
 }
 
 header img {
@@ -48,6 +48,7 @@ header form button {
     width: 125px;
     font-size: 24px;
     box-shadow: 0px 3px 5px rgba(0,0,0,0.2), 0px -3px 5px rgba(0,0,0,0.2);
+    
 }
 
 .units-wrapper {
@@ -111,6 +112,7 @@ main {
 .weather-details-wrapper {
     display: flex;
     align-items: center;
+    justify-items: center;
     justify-content: space-evenly;
     background-color: #e0f2fe;
     height: 100%;
@@ -136,7 +138,44 @@ main {
 
 /*****style seven day forecast*****/
 .seven-day {
-   
     background-color: #f1f5f9;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.seven-day-wrapper {
+    padding: 2rem;
+    display: grid;
+    gap:10px;
+    grid-template-columns: repeat(8, 1fr);
+    height: 150px;
+
+    width: 80%;
+}
+
+.seven-day img {
+    width: 2.5rem;
+}
+
+
+
+.day-wrapper {
+    height: 100%;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    background-color: #e0f2fe;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2), 0px -5px 10px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.day-wrapper .day {
+    font-size: 22px;
 }
 /*****end style seven day forecast*****/
