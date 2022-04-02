@@ -5,3 +5,7 @@ Practicing using API calls and asynchronous JavaScript concepts to create a weat
 - Using async/await in functions
 - Making API calls
 - Processing JSON data retreived asynchronously 
+
+# Images
+- Austin Andrews @Templarian
+- Simran @XT3000
