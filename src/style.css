@@ -42,7 +42,7 @@ header input {
 header form button {
     border: none;
     border-radius: 20px;
-    background-color: #fbbf24;
+    background-color: #f59e0b;
     color: #0f172a; 
     height: 2.25rem;
     width: 125px;
@@ -51,7 +51,7 @@ header form button {
 }
 
 .units-wrapper {
-    border: 3px solid #fbbf24;
+    border: 3px solid #f59e0b;
     border-radius: 20px;
    
     padding: 10px;
@@ -99,14 +99,44 @@ main {
 
 /*****end style main*****/
 
+/*****style weather details*****/
 .weather-details {
-    
+    padding: 30px 20% 30px 20%;
     background-color: #e0f2fe;
     box-shadow: 0px 5px 10px rgba(0,0,0,0.2), 0px -5px 10px rgba(0,0,0,0.2);
-    z-index:1;
+    z-index: 1;
+    font-size: 22px;
 }
 
+.weather-details-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #e0f2fe;
+    height: 100%;
+}
+
+.weather-details-wrapper > div {
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 3px solid #f59e0b;
+    border-radius: 20px;
+}
+
+.weather-details img {
+    width: 3rem;
+}
+
+/*****end style weather details*****/
+
+/*****style seven day forecast*****/
 .seven-day {
    
     background-color: #f1f5f9;
 }
+/*****end style seven day forecast*****/
