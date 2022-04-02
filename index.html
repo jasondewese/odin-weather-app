@@ -13,7 +13,15 @@
     
     <header class="header">
         <div class="logo-wrapper">
-            
+            <img src="./../src/images/sun-thermometer-outline.svg" alt="Sun thermometer" class="page-logo">
+        </div>
+        <form id="weather-search" action="#">
+            <label for="location">Enter a location to check the weather</label>
+            <input type="text" name="location" id="location-search">
+            <button id="search-button">Search</button>
+        </form>
+        <div class="units-wrapper">
+            <p>&deg;C/&deg;F</p>
         </div>
     </header>
     <main class="main">
@@ -28,9 +36,7 @@
     
 
 
-    <label for="location">Enter a location to check the weather</label>
-    <input type="text" name="location" id="location-search">
-    <button id="search-button">Search</button>
+    
 
     <script src="./main.js"></script>
 </body>
