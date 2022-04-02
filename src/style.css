@@ -12,6 +12,7 @@ html {
     width: 100vw;
 }
 
+/*****Style header******/
 header {
     padding: 0 50px 0 50px;
     display: flex;
@@ -59,13 +60,15 @@ header form button {
 header form button:hover, .units-wrapper:hover {
     cursor: pointer;
 }
+/*****End style header*****/
 
-
-
+/*****style main*****/
 main {
    
     background-color: #f1f5f9;
 }
+
+/*****end style main*****/
 
 .weather-details {
     
