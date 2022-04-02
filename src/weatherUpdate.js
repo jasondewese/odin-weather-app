@@ -79,13 +79,13 @@ const weatherUpdate = (() => {
         document.querySelector('#city').textContent = weather[0].name;
         document.querySelector('#current-weather-summary').textContent = weather[0].main;
         document.querySelector('#current-weather-icon').src = _getWeatherIcon(weather[0].main);
-        document.querySelector('#current-temp').textContent = weather[0].temp+' '+units;
-        document.querySelector('#current-low').textContent = 'Low: '+ weather[0].tempMin;
-        document.querySelector('#current-high').textContent = 'High: ' + weather[0].tempMax;
+        document.querySelector('#current-temp').textContent = Math.round(weather[0].temp)+' '+units;
+        document.querySelector('#current-low').textContent = 'Low: '+ Math.round(weather[0].tempMin);
+        document.querySelector('#current-high').textContent = 'High: ' + Math.round(weather[0].tempMax);
 
-        document.querySelector('#current-feels-like').textContent = weather[0].feelsLike;
-        document.querySelector('#current-humidity').textContent = weather[0].humidity;
-        document.querySelector('#current-rain-chance').textContent = weather[0].rain;
+        document.querySelector('#current-feels-like').textContent = Math.round(weather[0].feelsLike);
+        document.querySelector('#current-humidity').textContent = Math.round(weather[0].humidity);
+        document.querySelector('#current-rain-chance').textContent = weather[0].rain*100+' %';
         let windUnits;
         if (openWeatherRequest.getUnits() === 'imperial') {
             windUnits = 'mph';
@@ -93,13 +93,13 @@ const weatherUpdate = (() => {
         else {
             windUnits = 'km/h'
         }
-        document.querySelector('#current-wind').textContent = weather[0].windSpeed+' '+windUnits;
+        document.querySelector('#current-wind').textContent = Math.round(weather[0].windSpeed)+' '+windUnits;
 
         for (let i = 0; i < 8; i++) {
             document.querySelector('#day'+i).textContent = _getDay(weather[i].day);
             document.querySelector('#daily-weather-icon'+i).src = _getWeatherIcon(weather[i].main);
-            document.querySelector('#high-temp' + i).textContent = 'H: ' + weather[i].tempMax;
-            document.querySelector('#low-temp' + i).textContent = 'L: ' + weather[i].tempMin;
+            document.querySelector('#high-temp' + i).textContent = 'H: ' + Math.round(weather[i].tempMax);
+            document.querySelector('#low-temp' + i).textContent = 'L: ' + Math.round(weather[i].tempMin);
         }
     }
 
